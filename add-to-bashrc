@@ -1,0 +1,10 @@
+[[ "$-" != *i* ]] && return
+
+# ls -F -- slow but convenient.
+alias ls='/bin/ls -F --color=none'
+alias grep='/bin/grep --color=tty'
+alias view='/usr/bin/vim -R "+syntax off"'
+shopt -s checkwinsize cmdhist failglob histreedit histverify
+shopt -s no_empty_cmd_completion
+shopt -u hostcomplete
+export HISTCONTROL=erasedups
