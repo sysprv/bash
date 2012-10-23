@@ -7,4 +7,8 @@ if [[ "$-" == *i* ]]; then
 	shopt -s no_empty_cmd_completion
 	shopt -u hostcomplete
 	export HISTCONTROL=erasedups
+	if type -t command_not_found_handle >/dev/null; then
+		unset command_not_found_handle
+	fi
+	shopt -u progcomp
 fi
